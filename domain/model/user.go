@@ -11,7 +11,7 @@ import (
 type User struct {
 	Base  `valid:"-"`
 	Name  string `json:"name" valid:"notnull"`
-	Email string `json:"email" valid:"notnull"`
+	Email string `json:"email" valid:"email"`
 }
 
 func (user *User) isValid() error {
