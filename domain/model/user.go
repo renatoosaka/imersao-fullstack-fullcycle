@@ -15,7 +15,7 @@ type User struct {
 }
 
 func (user *User) isValid() error {
-	if err := govalidator.ValidateStruct(user); err != nil {
+	if _, err := govalidator.ValidateStruct(user); err != nil {
 		return err
 	}
 
